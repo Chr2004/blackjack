@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.body {
+	margin: 0 auto;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+	margin: 5px 0;
+	text-align: center;
+}
+
+#main {
+    background-image: url('images/10081437.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #333;
+    font: 14px/17px Helvetica, Arial, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 5vw;
+}
+
+.hand {
+    display: flex;
+    margin: 10px;
+}
+
+.card, .card-img {
+    width: 100px;
+    height: 160px;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-right: -25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.total-value {
+    margin-left: 2vw;
+    font-size: 25px;
+	color: white;
+}
+
+
+span.pos-0 {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+span.pos-1 {
+	bottom: 0;
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+	position: absolute;
+	right: 0;
+	transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
+span.rank {
+	font-size: 18px;
+}
+
+span.suit {
+	font-size: 22px;
+}
+
+.black {
+	color: #000;
+}
+
+.red {
+	color: #F00;
+}
+
+
+
+#buttons {
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: large;
+    color: #FFF;
+}
+
+.btn:disabled,
+.btn_deal:disabled {
+	background-color: #D6D6E7;
+	color: #A3A3B7;
+	cursor: not-allowed;
+	box-shadow: none;
+}
+
+.btn:focus:disabled,
+.btn:hover:disabled,
+.btn:active:disabled {
+	box-shadow: none;
+	transform: none;
+}
+
+.btn,
+.btn_deal {
+	align-items: center;
+	appearance: none;
+	background-color: #FCFCFD;
+	border-radius: 4px;
+	border-width: 0;
+	box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+	box-sizing: border-box;
+	color: #36395A;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: "JetBrains Mono", monospace;
+	height: 48px;
+	justify-content: center;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	padding-left: 16px;
+	padding-right: 16px;
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	transition: box-shadow .15s, transform .15s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	will-change: box-shadow, transform;
+	font-size: 18px;
+}
+
+.btn:focus {
+	box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.btn:hover {
+	box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+	transform: translateY(-2px);
+}
+
+.btn:active {
+	box-shadow: #D6D6E7 0 3px 7px inset;
+	transform: translateY(2px);
+}
+
+.btn {
+	margin-top: 2vw;
+}
+
+#bet-form {
+    color: white;
+    display: flex; 
+    align-items: center; 
+    border-radius: 20px;
+    border-color: #ffffff;
+    margin-left: 3vw;
+    font-size: 25px;
+    margin-top: 1vw;
+}
+
+#bet-input {
+    margin-left: 5px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+
+
+#bet-error-message {
+	margin-left: 1vw;
+	
+}
+
+
+#money,
+#money:before {
+	border-radius: 5px;
+	bottom: 0;
+	height: 55px;
+	padding: 7px;
+	position: absolute;
+	right: 10vw;
+	width: 250px;
+}
+
+#money:before {
+
+	content: '';
+	opacity: 0.8;
+}
+
+#bank {
+	color: #FFF;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 30px;
+	margin: 12px 0;
+	position: relative;
+	text-shadow: 1px 1px #000;
+	z-index: 1;
+}
+#result-message {
+	font-size: 25px;
+	color: white;
+}
+#splash-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333; 
+    color: white;
+}
+
+#splash-screen h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#play-btn {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-btn:hover {
+    background-color: #45a049; 
+}
+
+#bank-input {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

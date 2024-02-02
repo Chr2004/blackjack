@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="splash-screen">
+        <h1>Blackjack</h1>
+        <button id="play-btn" onclick="startGame()">Play</button>
+        <input type="number" id="bank-input" placeholder="Enter bank amount">
+    </div>
+    <div id="wrapper">
+        <div id="main">
+            <div>
+                <form id="bet-form">
+                    <label for="bet-input">Bet Amount:</label>
+                    <input type="text" id="bet-input" placeholder="Enter your bet amount">
+                    <p id="bet-error-message" style="color: red;"></p>
+                </form>
+            </div>
+           
+            <div id="money">
+                <div id="bank">Bank: $100</div>
+            </div>
+           
+            <div id="game">
+                <div id="player-hand" class="hand"></div>
+                <div id="dealer-hand" class="hand"></div>
+                <div id="result-message"></div>
+            </div>
+            
+            <div id="buttons">
+                <button id="deal-btn" class="btn_deal" onclick="deal()">Deal</button>
+                <button id="hit-btn" class="btn" onclick="hit()" disabled>Hit</button>
+                <button id="stand-btn" class="btn" onclick="stand()" disabled>Stand</button>
+                <button id="double" class="btn" disabled>Double Down</button>
+                <button id="split" class="btn" disabled>Split</button>
+                <button id="insurance" class="btn" disabled>Insurance</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
